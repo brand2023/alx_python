@@ -8,4 +8,4 @@ elif b==0:
     a="and is 0"
 elif b and b!=0:
     a="and is less than 6 and not 0"
-print("Last digit of {} is {} {}".format(number,b,a))
+print("Last digit of {1} is {2} {3}".format(number,b,a))
