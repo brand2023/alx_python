@@ -1,5 +1,4 @@
 def validate_password(password):
-    Sym =['$', '@', '#', '%']
     space=[' ']
     if len(password)<8:
         return(False)
