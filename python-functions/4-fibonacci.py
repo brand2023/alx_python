@@ -1,8 +1,11 @@
-t=[]
 def fibonacci_sequence(n):
-    if n>0:
-        for i in range(n):
-            t[i]=t[i-1]+t[i-2]
-            return(t)
+    t=[]
+    if n==0:
+        t=[]
+    elif n==1:
+        t=[0]
     else:
-        return(t)
+        t=[0,1]
+        for i in range(1, n-1):
+            t.append(t[i-1]+t[i])
+    return(t)
