@@ -8,7 +8,7 @@ def validate_password(password):
         return(False)
     if not any(char.islower() for char in password):
         return(False)
-    for i in range(password):
+    for i in range(len(password)):
         if password[i] in space:
             return(False)
     return(True)
