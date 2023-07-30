@@ -1,6 +1,6 @@
 def no_c(my_string):
     chr=my_string
-    for i in range(len(chr)):
-        if chr[i]=="c" and chr[i]=="C":
-            chr.remove(i)
+    for i in my_string:
+        if i=="c" and i=="C":
+            chr.remove("i")
     return(chr)
