@@ -2,10 +2,9 @@ def safe_print_division(a, b):
     try:
         result=a/b
     except TypeError:
-        print("a and b are integers")
+        result="None"
     except ZeroDivisionError:
         result="None"
-        print("Denominator cannot be 0.")
     finally:
         print("Inside result:",result)
         print("{:d} / {:d} = {}".format(a, b, result))
