@@ -24,9 +24,9 @@ class Square:
         Instantiation with size (no type/value verification)
 
         """
-        if type(value) is not int:
+        if type(self.__size) is not int:
             raise TypeError("size must be an integer")
-        elif value < 0:
+        elif self.__size < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
 
