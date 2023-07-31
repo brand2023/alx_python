@@ -35,7 +35,7 @@ class Square:
         Instantiation with size (no type/value verification)
 
         """
-        self.__size = size
+        self.__size = 0
 
     def area(self):
         """
