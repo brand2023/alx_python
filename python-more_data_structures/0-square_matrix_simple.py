@@ -5,4 +5,3 @@ def square_matrix_simple(matrix):
         print()
         for i in range(3):
             matrix.append([row[i] for row in matrix])
-    return(matrix)
