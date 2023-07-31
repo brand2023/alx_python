@@ -24,7 +24,7 @@ class Square:
         Instantiation with size (no type/value verification)
 
         """
-        if type(value) != int:
+        if type(value) is not int:
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
@@ -35,7 +35,7 @@ class Square:
         Instantiation with size (no type/value verification)
 
         """
-        self.__size = 0
+        self.__size = size
 
     def area(self):
         """
