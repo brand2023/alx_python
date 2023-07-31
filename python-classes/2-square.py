@@ -26,4 +26,5 @@ class Square:
         Instantiation with size (no type/value verification)
 
         """
+        self.area = self.__size ** 2
         return self.area
