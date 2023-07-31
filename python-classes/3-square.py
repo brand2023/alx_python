@@ -10,13 +10,6 @@ class Square:
 
     """
 
-    def __init__(self, size=0):
-        """
-        Instantiation with size (no type/value verification)
-
-        """
-        self.__size = size
-
     @property
     def size(self):
         """
@@ -36,6 +29,13 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
+    def __init__(self, size=0):
+        """
+        Instantiation with size (no type/value verification)
+
+        """
+        self.__size = size
 
     def area(self):
         """
