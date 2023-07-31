@@ -16,7 +16,12 @@ class Square:
 
         """
         self.__size = size
+        if type(size) != int:
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
 
+    @property
     def size(self):
         """
         Instantiation with size (no type/value verification)
@@ -24,15 +29,16 @@ class Square:
         """
         return self.__size
 
+    @size.setter
     def size(self, value):
         """
         Instantiation with size (no type/value verification)
 
         """
         self.__size = value
-        if type(self.__size) != int:
+        if type(value) != int:
             raise TypeError("size must be an integer")
-        if self.__size < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
 
     def area(self):
