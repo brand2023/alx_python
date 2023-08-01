@@ -5,13 +5,12 @@ fonction that check instance of a class
 
 def is_kind_of_class(obj, a_class):
     """
-    the fonction kind of class
-    Prototype: def inherits_from(obj, a_class):
-    You are not allowed to import any module
+     a function that returns True if the object is an instance of a class that 
+     inherited (directly or indirectly) from the specified class ; otherwise False.
 
+    arg: if type of obj is a_class 
     """
-    if isinstance(obj, a_class) and not issubclass(a_class, type(obj)):
-        return True
+    if issubclass(a_class, type(obj)):        return True
     else:
         return False
  
