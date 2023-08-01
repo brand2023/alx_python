@@ -1,8 +1,6 @@
-"""
-new class empty class
+"""Geometry module"""
 
-"""
 
 class BaseGeometry:
-    """new class empty class"""
+    """BaseGeometry class"""
     pass
