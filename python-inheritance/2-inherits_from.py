@@ -3,6 +3,7 @@ fonction that check instance of a class
 
 """
 
+
 def inherits_from(obj, a_class):
 
     """checks  the object is an instance of a class that
