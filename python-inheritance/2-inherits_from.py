@@ -3,27 +3,20 @@ fonction that check instance of a class
 
 """
 
-def is_kind_of_class(obj, a_class):
-    """
-     a function that returns True if the object is an instance of a class that 
-     inherited (directly or indirectly) from the specified class ; otherwise False.
+def inherits_from(obj, a_class):
+    """checks  the object is an instance of a class that
+    inherited (directly or indirectly) from the specified class
 
-    arg: if type of obj is a_class 
-    """
-    if issubclass(a_class, type(obj)):
-        """
-        a function that returns True if the object is an instance of a class that 
-        inherited (directly or indirectly) from the specified class ; otherwise False.
+    Args:
+        obj (Any): The object to check
+        a_class (Any): The class to check against
 
-        arg: if type of obj is a_class 
-        """
+    Returns:
+        bool: The check result
+    """
+
+    if isinstance(obj, a_class) and not issubclass(a_class, type(obj)):
         return True
     else:
-        """
-        a function that returns True if the object is an instance of a class that 
-        inherited (directly or indirectly) from the specified class ; otherwise False.
-
-        arg: if type of obj is a_class 
-        """
         return False
  
