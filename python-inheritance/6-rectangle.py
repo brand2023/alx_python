@@ -1,7 +1,7 @@
 """Rectangle class"""
+BaseGeometry = __import__('5-base_geometry').BaseGeometry
 
-
-class Rectangle:
+class Rectangle(BaseGeometry):
     """REc class"""
     def __init__(self, width, height):
         self.__width = width
