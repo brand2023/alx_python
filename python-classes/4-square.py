@@ -24,12 +24,11 @@ class Square:
         Instantiation with size (no type/value verification)
 
         """
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
-        else:
-            self.__size = value
+        self.__size = value
 
     def __init__(self, size=0):
         """
@@ -37,11 +36,24 @@ class Square:
 
         """
         self.__size = size
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
 
     def area(self):
         """
         Instantiation with size (no type/value verification)
 
         """
-        self.area = self.__size ** 2
-        return self.area
+        return self.__size ** 2
+
+    def my_print(self):
+        if self.size == 0:
+            print()
+            return
+        for _ in range(self.size):
+            for _ in range(self.size):
+                print("#", end="")
+
+            print()
