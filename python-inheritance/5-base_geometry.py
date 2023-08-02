@@ -13,3 +13,7 @@ class BaseGeometry:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
+
+    def __dir__(cls) -> None:
+        attributes=super().__dir__()
+        return [attribute for attribute in attributes if attribute != '__init_subclass__']
