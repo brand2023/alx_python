@@ -10,7 +10,7 @@ class BaseGeometry():
     pass
 
 class Myclass(metaclass = BaseGeometry):
-    """BaseGeometry class"""
+    """my class"""
     def __dir__(cls) -> None:
         attributes = super().__dir__()
         return [attribute for attribute in attributes if attribute != '__init_subclass__']
