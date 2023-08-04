@@ -2,7 +2,7 @@
 
 
 
-class BaseGeometry(type):
+class BaseGeometry():
     """BaseGeometry class"""
     def __dir__(cls) -> None:
         attributes = super().__dir__()
