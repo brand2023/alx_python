@@ -1,6 +1,5 @@
-Base = __import__('models/base').Base
-
 """Module documentatin"""
+Base = __import__('base').Base
 
 
 class Rectangle(Base):
