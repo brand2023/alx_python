@@ -21,9 +21,13 @@ class Rectangle(Base):
          self.__y = value4
 
     def __init__(self, width, height, x=0, y=0, id=None):
-         """documentation __init__"""
-         id = super().__init__()
-         self.__width = width
-         self.__height = height
-         self.__x = x
-         self.__y = y
+            """Initializes an instance.
+            Args:
+            - width: width of the rectangle
+            - heigth: height of the rectangle
+            """
+            id = super().__init__()
+            self.__width = width
+            self.__height = height
+            self.__x = x
+            self.__y = y
