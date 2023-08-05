@@ -1,18 +1,8 @@
 """Square module"""
 Rectangle = __import__('7-rectangle').Rectangle
 
-class BrandMetaClass(type):
-    """
-    documentation
-    """
-    def __dir__(cls):
-        """
-        documentation
-        """
-        return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
 
-
-class Square(Rectangle, metaclass = BrandMetaClass):
+class Square(Rectangle, ):
     """Square class"""
 
     def __init__(self, size):
@@ -26,9 +16,3 @@ class Square(Rectangle, metaclass = BrandMetaClass):
 
     def area(self):
         return self.__size * self.__size
-
-    def __dir__(cls):
-        """Removing __init_subclass__ attribute
-        from the dir result to pass the check
-        """
-        return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
