@@ -1,9 +1,9 @@
-"""Module documentatin"""
+"""Module Base documentatin"""
 Base = __import__('base').Base
 
 
 class Rectangle(Base):
-    """class documentation"""
+    """class base documentation"""
     @property
     def attributes(self):
          """
