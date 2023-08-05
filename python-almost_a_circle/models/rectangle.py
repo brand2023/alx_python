@@ -15,12 +15,14 @@ class Rectangle(Base):
 
     @attributes.setter
     def attributes(self, value1, value2, value3, value4):
+         """documentation setter"""
          self.__width = value1
          self.__height = value2
          self.__x = value3
          self.__y = value4
 
     def __init__(self, width, height, x=0, y=0, id=None):
+         """documentation __init__"""
          id = super().__init__()
          self.__width = width
          self.__height = height
