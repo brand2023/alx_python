@@ -1,4 +1,4 @@
-Base = __import__('base').Base
+Base = __import__('models/base').Base
 
 """Module documentatin"""
 
