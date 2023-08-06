@@ -122,3 +122,11 @@ class Rectangle(Base):
         string += " {}/{}".format(self.__x, self.__y)
         string += " - {}/{}".format(self.__width, self.__height)
         return string
+
+    def update(self, *args):
+        """assigns an argument to each attribute."""
+        args[0] = self.id
+        args[1] = self.__width
+        args[2] = self.__height
+        args[3] = self.__x
+        args[4] = self.__y
