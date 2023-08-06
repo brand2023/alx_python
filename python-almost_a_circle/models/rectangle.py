@@ -114,5 +114,6 @@ class Rectangle(Base):
     def __str__(self):
         """overriding the __str__ method ."""
         string = "[Rectangle] ({})".format(self.id)
-        string += " {}/{} - {}/{}".format(self.__x, self.__y, self.__width, self.__height)
+        string += " {}/{}".format(self.__x, self.__y)
+        string += " - {}/{}".format(self.__width, self.__height)
         return string
