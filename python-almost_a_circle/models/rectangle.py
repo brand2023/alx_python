@@ -5,19 +5,55 @@ from models.base import Base
 class Rectangle(Base):
     """class base documentation"""
     @property
-    def attributes(self):
+    def width(self):
         """
         documentation of def
 
         """
-        return self.__width, self.__height, self.__x, self.__y
+        return self.__width
 
-    @attributes.setter
-    def attributes(self, value1, value2, value3, value4):
+    @property
+    def height(self):
+        """
+        documentation of def
+
+        """
+        return self.__height
+
+    @property
+    def x(self):
+        """
+        documentation of def
+
+        """
+        return self.__x
+
+    @property
+    def y(self):
+        """
+        documentation of def
+
+        """
+        return self.__y
+
+    @width.setter
+    def width(self, value1):
         """documentation setter"""
         self.__width = value1
+
+    @height.setter
+    def width(self, value2):
+        """documentation setter"""
         self.__height = value2
+
+    @x.setter
+    def width(self, value3):
+        """documentation setter"""
         self.__x = value3
+
+    @y.setter
+    def width(self, value4):
+        """documentation setter"""
         self.__y = value4
 
     def __init__(self, width, height, x=0, y=0, id=None):
