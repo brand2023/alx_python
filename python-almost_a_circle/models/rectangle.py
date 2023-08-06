@@ -123,7 +123,7 @@ class Rectangle(Base):
         string += " - {}/{}".format(self.__width, self.__height)
         return string
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """assigns an argument to each attribute."""
         if args is not None and len(args) > 0:
             try:
@@ -146,3 +146,6 @@ class Rectangle(Base):
                 self.__y = args[4]
             except IndexError:
                 pass
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
