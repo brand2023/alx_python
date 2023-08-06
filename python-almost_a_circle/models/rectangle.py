@@ -39,21 +39,37 @@ class Rectangle(Base):
     @width.setter
     def width(self, value1):
         """documentation setter"""
+        if not isinstance(value1, int):
+            raise TypeError ("width must be an integer")
+        if value1 <= 0:
+            raise ValueError ("width must be > 0")
         self.__width = value1
 
     @height.setter
     def height(self, value2):
         """documentation setter"""
+        if not isinstance(value2, int):
+            raise TypeError ("height must be an integer")
+        if value2 <= 0:
+            raise ValueError ("height must be > 0")
         self.__height = value2
 
     @x.setter
     def x(self, value3):
         """documentation setter"""
+        if not isinstance(value3, int):
+            raise TypeError ("x must be an integer")
+        if value3 < 0:
+            raise ValueError ("x must be >= 0")
         self.__x = value3
 
     @y.setter
     def y(self, value4):
         """documentation setter"""
+        if not isinstance(value4, int):
+            raise TypeError ("y must be an integer")
+        if value4 < 0:
+            raise ValueError ("y must be >= 0")
         self.__y = value4
 
     def __init__(self, width, height, x=0, y=0, id=None):
