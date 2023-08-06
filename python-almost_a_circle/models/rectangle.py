@@ -103,3 +103,9 @@ class Rectangle(Base):
     def area(self):
         """area documentation"""
         return self.__width*self.__height
+
+    def display(self):
+        """print() representation of a Rectangle."""
+        for _ in range(self.__height):
+            for _ in range(self.__width):
+                print("#", end="")
