@@ -26,9 +26,8 @@ class Rectangle(Base):
         - width: width of the rectangle
         - heigth: height of the rectangle
         """
-        id = super().__init__()
+        super().__init__(id)
         self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
-        self.__id = id
