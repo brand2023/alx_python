@@ -10,7 +10,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """overriding the __str__ method ."""
-        string = "[Square] ({})".format(self.id)
-        string += " {}/{}".format(self.__x, self.__y)
-        string += " - {}".format(self.__width)
-        return string
+        return "[Square] ({id}) {x}/{y} - {size}".format(
+            id=self.id,
+            x=self.x, y=self.y,
+            size=self.width
+        )
