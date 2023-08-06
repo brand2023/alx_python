@@ -125,7 +125,7 @@ class Rectangle(Base):
 
     def update(self, *args):
         """assigns an argument to each attribute."""
-        if args is not None:
+        if args is not None and len(args) > 0:
             self.id = args[0]
             self.__width = args[1]
             self.__height = args[2]
