@@ -9,3 +9,4 @@ Body response:
 \t- type: {}
 \t- content: {}
 """.format(type(content), content)
+print(reponse)
