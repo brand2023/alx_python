@@ -1,7 +1,7 @@
 """documentation module"""
 
 from requests import get
-
+"""response documentation"""
 req = get("https://alu-intranet.hbtn.io/status")
 content = str(req.content, "UTF-8")
 
