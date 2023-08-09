@@ -3,6 +3,7 @@ import requests as r
 import sys as s
 
 def __main__():
+    """documentation main fonction"""
     req = r.get("https://intranet.hbtn.io")
     header = req.headers
     print(header['X-Request-Id'])
