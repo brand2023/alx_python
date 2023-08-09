@@ -1,8 +1,8 @@
 """documentation module"""
 
-import requests
+from requests import get
 if __name__ == "__main__":
-    req = requests.get("https://alu-intranet.hbtn.io/status")
+    req = get("https://alu-intranet.hbtn.io/status")
     content = str(req.content, "UTF-8")
 
     reponse = """
