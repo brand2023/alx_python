@@ -10,7 +10,7 @@ def fetch_hbtn_status():
     Body response:
     \t- type: {}
     \t- content: {}
-    """.strip().stripformat(type(content), content)
+    """.strip().format(type(content), content)
     print(reponse)
 if __name__ == "__main__":
     fetch_hbtn_status()
