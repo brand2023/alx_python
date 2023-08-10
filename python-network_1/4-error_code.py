@@ -8,3 +8,5 @@ if __name__ == "__main__":
     code = response.status_code
     if code >= 400:
         print("Error code: ",code)
+    else:
+        print("Regular request")
