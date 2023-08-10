@@ -4,16 +4,19 @@ import sys as s
 
 
 if __name__ == "__main__":
-    q=s.argv[1]
 
-    if len(q) == 0:
+    try:
+        q = s.argv[1]
+    except IndexError:
         q = ""
+
     response = r.post("http://0.0.0.0:5000/search_user", {"q": q})
-    jeson = response.json()
-    if response.status_code == 200:
+
+    try:
+        jeson = response.json()
         if len(jeson) != 0:
             print ("[{}] {}".format(jeson["id"], jeson["name"]))
         else:
             print("No result")
-    else:
+    except jeson.decoder.JSONDecodeError:
         print("Not a valid JSON")
