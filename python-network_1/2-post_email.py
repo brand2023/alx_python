@@ -8,5 +8,4 @@ if __name__ == "__main__":
     response = r.get(s.argv[1], email)
     postr = r.post(email)
     content = postr.text
-    print(content)
-    print("Your email is: ",email)
+    print(email)
