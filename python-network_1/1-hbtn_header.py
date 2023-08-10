@@ -4,7 +4,8 @@ import sys as s
 
 def __main__():
     """documentation main fonction"""
-    req = r.get("https://intranet.hbtn.io")
+    url = s.argv[1]
+    req = r.get(url)
     header = req.headers['X-Request-Id']
     return header
 if __name__ == "__main__":
