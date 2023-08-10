@@ -2,11 +2,7 @@
 import requests as r
 import sys as s
 
-def __main__():
-    """documentation main fonction"""
-    url = s.argv[1]
-    req = r.get(url)
-    header = req.headers.get('X-Request-Id')
-    return header
+
 if __name__ == "__main__":
-    __main__
+    response = r.get(s.argv[1])
+    print(response.headers.get("X-Request-Id"))
