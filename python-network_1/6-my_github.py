@@ -7,7 +7,7 @@ if __name__ == "__main__":
 
     username = s.argv[1]
     password = s.argv[2]
-    response = r.get("https://api.github.com/user/{}".format(username), {"password": password})
+    response = r.get("https://api.github.com/user/{}".format(username), headers={"password": password})
     try:
         jeson = response.json()
         try:
