@@ -1,17 +1,20 @@
-"""documentation module"""
-import requests as r
-import sys as s
+#!/usr/bin/python3
+"""My module"""
 
+import sys
+import requests
 
 if __name__ == "__main__":
+    url = "https://api.github.com/users"
+    username = sys.argv[1]
+    password = sys.argv[2]
 
-    username = s.argv[1]
-    password = s.argv[2]
-    response = r.get("https://api.github.com/user/{}".format(username), headers={"Authorization": password})
+    response = requests.get("{}/{}".format(url, username),
+                            headers={"Authorization": password})
     try:
-        jeson = response.json()
+        json = response.json()
         try:
-            print(jeson["id"])
+            print(json["id"])
         except:
             print("None")
     except Exception as e:
