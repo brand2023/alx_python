@@ -14,5 +14,5 @@ if __name__ == "__main__":
             print(jeson["id"])
         except:
             print("None")
-    except:
+    except Exception as e:
         pass
