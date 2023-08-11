@@ -8,5 +8,11 @@ if __name__ == "__main__":
     username = s.argv[1]
     password = s.argv[2]
     response = r.get("https://api.github.com/user/{username}", {"password": password})
-    jeson = response.json()
-    print (jeson["id"])
+    try:
+        jeson = response.json()
+        try:
+            print(jeson["id"])
+        except:
+            print(None)
+    except:
+        pass
