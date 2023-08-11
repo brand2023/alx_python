@@ -1,18 +1,12 @@
-"""documentation module"""
-import requests as r
-import sys as s
+#!/usr/bin/python3
+"""takes your GitHub credentials (username and password)
+   uses the GitHub API to display your id"""
+from sys import argv
+from requests import get
+from requests.auth import HTTPBasicAuth
 
 
 if __name__ == "__main__":
-
-    username = s.argv[1]
-    password = s.argv[2]
-    response = r.get("https://api.github.com/user/{}".format(username), headers={"Authorization": password})
-    try:
-        jeson = response.json()
-        try:
-            print(jeson["id"])
-        except:
-            print("None")
-    except:
-        pass
+    credentials = HTTPBasicAuth(argv[1], argv[2])
+    request = get("https://api.github.com/user", auth=credentials)
+    print(request.json().get("id"))
