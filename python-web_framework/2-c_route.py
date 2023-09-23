@@ -13,7 +13,8 @@ def HBNB():
 
 @app.route("/c/<text>", strict_slashes=False)
 def ctext(text):
-    return "C %s"%text
+    varrr = "C %s"%text 
+    return varrr.replace("_", " ")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port = 5000)
