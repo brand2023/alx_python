@@ -3,9 +3,10 @@
 import MySQLdb as Mydb
 import sys
 
+
 def cities():
     """def states"""
-    
+
     db_connect = Mydb.connect(
         host="localhost",
         port=3306,
