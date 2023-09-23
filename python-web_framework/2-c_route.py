@@ -13,7 +13,7 @@ def HBNB():
 
 @app.route("/c/<text>", strict_slashes=False)
 def ctext(text):
-    return "C {}".format(text)
+    return "C %s"%text
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port = 5000)
