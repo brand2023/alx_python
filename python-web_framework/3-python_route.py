@@ -1,23 +1,25 @@
-from flask import Flask
+"""flask importing"""
+rom flask import Flask
 
 app = Flask(__name__)
 
 @app.route("/", strict_slashes=False)
 def Hello_HBNB():
-    return "<p>Hello HBNB!</p>"
+    return "Hello HBNB!"
 
 @app.route("/hbnb", strict_slashes=False)
 def HBNB():
-    return "<p>HBNB</p>"
+    return "HBNB"
 
 @app.route("/c/<text>", strict_slashes=False)
 def ctext(text):
-    return "C {}".format(text)
+    varrr = "C %s"%text 
+    return varrr.replace("_", " ")
 
 @app.route("/python/", strict_slashes=False)
 @app.route("/python/text/<int:text>", strict_slashes=False)
 def ptext(text="is cool"):
-    return "Python {}".format(text)
-
+    varrrR = "C %s"%text 
+    return varrrR.replace("_", " ")
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port = 5000)
