@@ -16,7 +16,7 @@ def states():
         )
     db_cursor = db_connect.cursor()
     db_cursor.execute(
-        "SELECT * FROM states WHERE name LIKE BINARY %s"%sys.argv[4], "ORDER BY states.id"
+        "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY states.id".format(sys.argv[4])
         )
     rows_selected = db_cursor.fetchall()
     for row in rows_selected:
