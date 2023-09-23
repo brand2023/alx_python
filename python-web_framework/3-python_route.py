@@ -13,7 +13,7 @@ def HBNB():
 
 @app.route("/c/<text>", strict_slashes=False)
 def ctext(text):
-    varrr = "C %s"%text 
+    varrr = "C %s"%text
     return varrr.replace("_", " ")
 
 @app.route("/python/", strict_slashes=False)
