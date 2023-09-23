@@ -17,8 +17,8 @@ def ctext(text):
     return varrr.replace("_", " ")
 
 @app.route("/python/", strict_slashes=False)
-@app.route("/python/text/<int:text>", defaults={'text': "is cool"}, strict_slashes=False)
-def ptext(text):
+@app.route("/python/text/<int:text>", strict_slashes=False)
+def ptext(text = "is cool"):
     varrrR = "Python %s"%text
     return varrrR.replace("_", " ")
 if __name__ == "__main__":
