@@ -16,7 +16,7 @@ def states():
         )
     db_cursor = db_connect.cursor()
     db_cursor.execute(
-        "SELECT * FROM states WHERE name LIKE %s", (sys.argv[4])
+        "SELECT * FROM states WHERE name LIKE %s", (sys.argv[4],)
         )
     rows_selected = db_cursor.fetchall()
     for row in rows_selected:
