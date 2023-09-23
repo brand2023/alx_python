@@ -18,8 +18,8 @@ def ctext(text):
 
 @app.route("/python/", strict_slashes=False)
 @app.route("/python/text/<int:text>", strict_slashes=False)
-def ptext(text="is cool"):
-    varrrR = "C %s"%text 
+def ptext(text = "is cool"):
+    varrrR = "Python %s"%text
     return varrrR.replace("_", " ")
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port = 5000)
