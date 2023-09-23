@@ -15,7 +15,9 @@ def cities():
         db=sys.argv[3]
         )
     db_cursor = db_connect.cursor()
-    db_cursor.execute("SELECT * FROM cities")
+    db_cursor.execute("""SELECT cities.id, cities.name, states.name FROM
+                cities INNER JOIN states ON states.id=cities.state_id"""
+                      )
     rows_selected = db_cursor.fetchall()
     for row in rows_selected:
         print(row)
