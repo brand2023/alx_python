@@ -16,7 +16,9 @@ def cities():
         )
     db_cursor = db_connect.cursor()
     db_cursor.execute(
-        "SELECT * FROM cities WHERE name LIKE %s", (sys.argv[4],)
+        """SELECT cities.name FROM
+                cities INNER JOIN states ON states.id=cities.state_id
+                WHERE states.name=%s""", (sys.argv[4],)
         )
     rows_selected = db_cursor.fetchall()
     for row in rows_selected:
