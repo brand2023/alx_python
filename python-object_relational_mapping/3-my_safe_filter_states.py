@@ -8,7 +8,7 @@ def states():
     """def states"""
 
     db_connect = Mydb.connect(
-        host="localhost",
+        "localhost",
         port=3306,
         user=sys.argv[1],
         passwd=sys.argv[2],
