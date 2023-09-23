@@ -1,23 +1,26 @@
+"""flask importing"""
 from flask import Flask
 
 app = Flask(__name__)
 
 @app.route("/", strict_slashes=False)
 def Hello_HBNB():
-    return "<p>Hello HBNB!</p>"
+    return "Hello HBNB!"
 
 @app.route("/hbnb", strict_slashes=False)
 def HBNB():
-    return "<p>HBNB</p>"
+    return "HBNB"
 
 @app.route("/c/<text>", strict_slashes=False)
 def ctext(text):
-    return "C {}".format(text)
+    varrr = "C %s"%text
+    return varrr.replace("_", " ")
 
-@app.route("/python/", strict_slashes=False)
-@app.route("/python/text/<int:text>", strict_slashes=False)
-def ptext(text="is cool"):
-    return "Python {}".format(text)
+@app.route("/python/", defaults={'text': 'is cool'}, strict_slashes=False)
+@app.route("/python/<text>", strict_slashes=False)
+def ptext(text = "is cool"):
+    varrrR = "Python %s"%text
+    return varrrR.replace("_", " ")
 
 @app.route("/number/<n>", strict_slashes=False)
 def numbern(n):
