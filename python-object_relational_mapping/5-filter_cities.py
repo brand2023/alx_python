@@ -21,7 +21,7 @@ def cities():
                 WHERE states.name=%s""", (sys.argv[4],)
         )
     rows_selected = db_cursor.fetchall()
-    for row in rows_selected:
-        print(row)
+    tmp = list(row[0] for row in rows_selected)
+    print(*tmp, sep=", ")
 if __name__ == "__main__":
     cities()
